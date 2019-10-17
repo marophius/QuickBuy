@@ -16,7 +16,16 @@ namespace QuickBuy.Dominio.Entities
         /// </summary>
         public ICollection<Request> Requests { get; set; }
 
-
-
+        public override void Validate()
+        {
+            if (string.IsNullOrEmpty(Email))
+            {
+                AddCriticsm("Invalid e-mail");
+            }
+            if (string.IsNullOrEmpty(Password))
+            {
+                AddCriticsm("Password not reported");
+            }
+        }
     }
 }

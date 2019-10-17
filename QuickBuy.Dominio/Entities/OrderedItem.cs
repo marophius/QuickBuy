@@ -12,7 +12,14 @@ namespace QuickBuy.Dominio.Entities
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (ProductId == 0)
+            {
+                AddCriticsm("The product's reference can not be defined!");
+            }
+            if(Amount == 0)
+            {
+                AddCriticsm("Amount not reported");
+            }
         }
     }
 }
