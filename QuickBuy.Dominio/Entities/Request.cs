@@ -19,12 +19,12 @@ namespace QuickBuy.Dominio.Entities
         public string Address { get; set; }
         public int AddressNumber { get; set; }
         public int PaymentFormId { get; set; }
-        public PaymentForm PaymentForm { get; set; }
+        public virtual PaymentForm PaymentForm { get; set; }
 
         /// <summary>
         /// Pedido deve ter pelo menos um ou muitos pedidos, relação de 1 para N
         /// </summary>
-        public ICollection<OrderedItem> OrderedItems { get; set; }
+        public virtual ICollection<OrderedItem> OrderedItems { get; set; }
 
         public override void Validate()
         {

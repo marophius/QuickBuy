@@ -2,7 +2,7 @@
   "Chave": "ValorChave",
   "ConnectionStrings": {
     "SqkServerConnection": "",
-    "QuickBuyDb": "server=localhost;uid=root;pwd=123456789;database=test"
+    "QuickBuyDb": "server=localhost;uid=root;pwd=123456789;database=QuickBuyDb"
   }
 }
 
