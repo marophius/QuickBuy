@@ -27,6 +27,7 @@ namespace QuickBuy.Repositorio.Config
             builder.Property(r => r.AddressNumber)
                 .IsRequired()
                 .HasMaxLength(10);
+            builder.HasOne(p => p.User);
         }
     }
 }
