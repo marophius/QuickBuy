@@ -29,6 +29,26 @@ namespace QuickBuy.Repositorio.Context
             modelBuilder.ApplyConfiguration(new RequestConfiguration());
             modelBuilder.ApplyConfiguration(new OrderedItemConfiguration());
             modelBuilder.ApplyConfiguration(new PaymentFormConfiguration());
+
+            modelBuilder.Entity<PaymentForm>().HasData(
+                new PaymentForm() { 
+                    Id = 1, 
+                    Name = "Boleto", 
+                Description = "Paymentform BankSlip" 
+                },
+                new PaymentForm()
+                {
+                    Id = 2,
+                    Name = "Credit Card",
+                    Description = "Paymentform Credit Card"
+                },
+                new PaymentForm()
+                {
+                    Id = 3,
+                    Name = "Deposit",
+                    Description = "Paymentform Deposit"
+                }
+            );
             base.OnModelCreating(modelBuilder);
         }
     }
